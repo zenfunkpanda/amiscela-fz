@@ -29,7 +29,7 @@ static void amiscela_draw_callback(Canvas* canvas, void* context) {
         app->gasoline_deciliters / 10,
         app->gasoline_deciliters % 10);
     snprintf(percent_text, sizeof(percent_text), "%u%%", app->oil_percent);
-    snprintf(oil_text, sizeof(oil_text), "Olio: %u g", oil_grams);
+    snprintf(oil_text, sizeof(oil_text), "Olio: %u gr", oil_grams);
 
     /* Textbox dei valori, con indicazione dei tasti associati. */
     canvas_draw_frame(canvas, 2, 1, 125, 54);
