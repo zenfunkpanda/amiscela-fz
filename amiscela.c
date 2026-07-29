@@ -2,7 +2,6 @@
 #include <gui/gui.h>
 #include <input/input.h>
 
-/* Bicchiere graduato 58x58, bitmap XBM 1-bit (olio al livello di 25 gr). */
 static const uint8_t amiscela_cup_58x58[] = {
     0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
     0x00, 0x00, 0x00, 0x00, 0xDC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -75,16 +74,11 @@ static void amiscela_draw_callback(Canvas* canvas, void* context) {
     snprintf(percent_text, sizeof(percent_text), "%u%%", app->oil_percent);
     snprintf(oil_text, sizeof(oil_text), "Olio %u gr", oil_grams);
 
-    /*
-     * L'area x=1..58, y=1..58 e' riservata all'immagine 58x58.
-     * I valori sono raccolti nella colonna destra.
-     */
     canvas_draw_str_aligned(canvas, 94, 10, AlignCenter, AlignBottom, "Benzina");
     canvas_set_font(canvas, FontPrimary);
     canvas_draw_str_aligned(canvas, 94, 24, AlignCenter, AlignBottom, liters_text);
     canvas_set_font(canvas, FontSecondary);
     canvas_draw_str_aligned(canvas, 94, 38, AlignCenter, AlignBottom, "Miscela");
-    /* Frecce per indicare la regolazione della percentuale. */
     canvas_draw_line(canvas, 72, 52, 72, 42);
     canvas_draw_line(canvas, 72, 42, 68, 46);
     canvas_draw_line(canvas, 72, 42, 76, 46);

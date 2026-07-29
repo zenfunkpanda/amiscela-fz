@@ -5,7 +5,7 @@ App(
     entry_point="amiscela_app",
     requires=["gui"],
     stack_size=1 * 1024,
-    fap_version="1.0",
+    fap_version="0.2",
     fap_description="Applicazione di esempio Amiscela",
     fap_category="Tools",
 )
