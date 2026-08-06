@@ -2,6 +2,9 @@
 
 Two-stroke premix calculator for the Flipper Zero. For the mathematically challenged.
 
+## Screenshot
+![aMiscela screenshot](amiscela-screenshot.jpeg)
+
 ## Development versions
 
 - Application version: **0.2**
